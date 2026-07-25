@@ -1,8 +1,13 @@
 
-export default function Home() {
+import Hero from "@/components/home/Hero";
+import { Stats } from "@/components/home/Stats";
+
+export default function Home(): React.JSX.Element {
   return (
-    <div>
-      
-    </div>
+    <>
+      <Hero />
+      <Stats />
+    </>
   );
 }
+
