@@ -2,21 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { clsx } from "clsx";
+import { STATS, type StatItem } from "@/data";
 
-export interface StatItem {
-  value: string;
-  numericTarget: number;
-  prefix?: string;
-  suffix?: string;
-  label: string;
-}
-
-export const STATS: StatItem[] = [
-  { value: "200+", numericTarget: 200, suffix: "+", label: "Projects delivered" },
-  { value: "2018", numericTarget: 2018, label: "Founded in Lagos" },
-  { value: "5", numericTarget: 5, label: "Specialist services" },
-  { value: "100%", numericTarget: 100, suffix: "%", label: "Client-referred growth" },
-];
+export { STATS, type StatItem };
 
 interface AnimatedCounterProps {
   target: number;

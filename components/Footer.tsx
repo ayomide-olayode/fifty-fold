@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MessageCircle } from "lucide-react";
+import { CONTACT, NAV_LINKS, type NavLinkItem } from "@/data";
+
+export { NAV_LINKS, CONTACT, type NavLinkItem };
 
 function InstagramIcon({ size = 18 }: { size?: number }): React.JSX.Element {
   return (
@@ -20,39 +23,6 @@ function InstagramIcon({ size = 18 }: { size?: number }): React.JSX.Element {
     </svg>
   );
 }
-
-export interface NavLinkItem {
-  label: string;
-  to: string;
-}
-
-export interface ContactInfo {
-  phoneDisplay: string;
-  phoneHref: string;
-  whatsappHref: string;
-  email: string;
-  instagram: string;
-  instagramHandle: string;
-  address: string;
-}
-
-export const NAV_LINKS: NavLinkItem[] = [
-  { label: "Home", to: "/" },
-  { label: "About", to: "/about" },
-  { label: "Services", to: "/services" },
-  { label: "Portfolio", to: "/portfolio" },
-  { label: "Contact", to: "/contact" },
-];
-
-export const CONTACT: ContactInfo = {
-  phoneDisplay: "+234 803 000 0000",
-  phoneHref: "tel:+2348030000000",
-  whatsappHref: "https://wa.me/2348030000000",
-  email: "hello@fiftyfold.ng",
-  instagram: "https://instagram.com/fiftyfoldng",
-  instagramHandle: "@fiftyfoldng",
-  address: "Lekki Phase 1, Lagos, Nigeria",
-};
 
 export function Footer(): React.JSX.Element {
   return (
@@ -152,5 +122,3 @@ export function Footer(): React.JSX.Element {
     </footer>
   );
 }
-
-
